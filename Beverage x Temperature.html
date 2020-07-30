@@ -1,0 +1,151 @@
+<DOCTYPE html>
+
+<! README
+
+An exercise to combine most of the elements of
+Evans KPL  Javascript 2020 course  wk1-4 into a single project.
+
+
+>	
+
+<html>
+
+<head>
+
+	<title>ComboExample</title>
+
+<style>
+
+
+		
+body{
+	background-color: lightblue;
+	color: black;
+	text-align: center;
+	}
+
+p {
+	text-align:center;
+	align-content: center;
+	}
+
+h1  {
+	text-align:center;
+	font-size: 3em;
+	margin 30px;
+	border: black 5px;
+	border-style: solid;
+	padding:    30px;   
+	color: black;
+	background-color:orange;
+	}
+
+h3 {
+	text-align:center;
+	font-size: 2em;
+	margin 10px;
+	color: black;
+    } 
+
+div {
+	text-align:center;
+	font-size: 4em;
+	margin 20px;
+	color: black;
+    } 
+
+button{
+	background-color: red;
+	color: green;
+	font-size: 2em;
+	border-style: double;
+	width:150px;
+	height:150;
+	float: center;
+	background-color: lightgrey;
+	border-radius: 50%;   
+    
+// comment in a css file	at   end: 
+<!  comment 2 
+</style>	
+
+
+</head>
+
+<? xxxxxxxpg2020xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+<body>
+<h1>Evans KPL  Javascript 2020 course</h1>
+
+
+<h3> Review and Reference </h3>
+
+
+
+Whats THE TEMP?  <input id="temp">
+
+<br>
+<hr>
+<div id = "youSaid"> </div>
+
+<div id = "beverage" > </div>
+
+<p>
+
+<button id="button1">Hit the Button</button><br>
+<button onclick="reset()">RESET</button>
+
+
+</p>
+
+
+
+<script>
+
+var tempToday;
+
+
+function sayTemp() {
+
+	alert("Hit me for Recommended Beverage ");
+	
+
+	var tempToday = document.getElementById('temp').value;
+
+	console.log (tempToday);
+ 
+    var html = 'You Entered <b>' + tempToday + '</b> ' ;
+ 
+    document.getElementById('youSaid').innerHTML = html;
+
+
+
+	if(tempToday >= 30) {
+		//document.write("It is HOT \ outside ")
+		document.getElementById('beverage').innerHTML = "Cold Beer";
+	}
+
+	else if (tempToday <= 20){
+		//document.write("It is \n nice outside  " )
+		document.getElementById('beverage').innerHTML = "Hot Coffee";
+	}
+	else{
+		//document.write("I don't know ")	
+		document.getElementById('beverage').innerHTML = "Pop";
+	}
+}	
+
+
+ 
+document.getElementById('button1').addEventListener('click', sayTemp);
+
+function reset(){
+		location.reload();
+	}
+
+
+</script>
+
+</body>
+
+</html>
+
